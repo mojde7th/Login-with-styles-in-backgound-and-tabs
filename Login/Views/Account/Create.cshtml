@@ -1,0 +1,19 @@
+﻿
+@{ ViewBag.Title = "Create";
+                Layout = "~/Views/Shared/_my1.cshtml";
+                }
+<center>
+    <br />
+    <br />
+    <div class="jumbotron">
+        <input type="button" class="btn input-group-btn" value="نمایش جدول" onclick="location.href='@Url.Action("but", "Account")'" />
+    </div>
+</center>
+<script>
+    function but() {
+        $.get("/Home/but", function (data) {
+            $("p").html(data);
+        });
+    }</script>
+
+
